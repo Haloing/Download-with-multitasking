@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6HG-vI-ac6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dds-xU-3BL">
+            <objects>
+                <tableViewController id="6HG-vI-ac6" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="B89-7E-FEX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="hh" id="3Mt-3I-gLm" customClass="BookListTableViewCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Mt-3I-gLm" id="Tmz-rp-MqF">
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="I3G-n1-XTI">
+                                            <rect key="frame" x="18" y="34" width="310" height="2"/>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQW-8J-LDM">
+                                            <rect key="frame" x="18" y="8" width="310" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="I3G-n1-XTI" firstAttribute="leading" secondItem="Tmz-rp-MqF" secondAttribute="leading" constant="18" id="27F-HV-bY7"/>
+                                        <constraint firstAttribute="bottom" secondItem="I3G-n1-XTI" secondAttribute="bottom" constant="8" id="MJf-vU-iie"/>
+                                        <constraint firstAttribute="trailing" secondItem="sQW-8J-LDM" secondAttribute="trailing" id="Mh1-6U-bOl"/>
+                                        <constraint firstItem="sQW-8J-LDM" firstAttribute="top" secondItem="Tmz-rp-MqF" secondAttribute="top" constant="8" id="MtN-Bl-U67"/>
+                                        <constraint firstItem="I3G-n1-XTI" firstAttribute="top" secondItem="sQW-8J-LDM" secondAttribute="bottom" constant="9" id="TfL-gt-2k6"/>
+                                        <constraint firstAttribute="trailing" secondItem="I3G-n1-XTI" secondAttribute="trailing" id="dem-Il-yko"/>
+                                        <constraint firstItem="sQW-8J-LDM" firstAttribute="leading" secondItem="Tmz-rp-MqF" secondAttribute="leading" constant="18" id="m06-Dj-NI0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="sQW-8J-LDM" id="MDD-ua-NxE"/>
+                                    <outlet property="progressView" destination="I3G-n1-XTI" id="nis-5m-ZkD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6HG-vI-ac6" id="jB7-fH-KNu"/>
+                            <outlet property="delegate" destination="6HG-vI-ac6" id="JnC-jL-CvU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhe-OO-0Ds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
